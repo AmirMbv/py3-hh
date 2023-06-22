@@ -1,3 +1,6 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import Worker
+def worker_list(request):
+    workers = Worker.objects.all()
+    context = {'workers' :workers}
+    return render(request, 'workers.html', context)

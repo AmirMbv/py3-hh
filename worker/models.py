@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Worker(models.Model):
+    name = models.CharField(max_length=255)
+    specialization = models.TextField()
+    expected_salary = models.IntegerField (null=True, blank=True)
+    is_searing = models.BooleanField(default=True)
