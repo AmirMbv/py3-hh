@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from core.views import *
 from worker.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage),
@@ -26,5 +27,6 @@ urlpatterns = [
     path('address/', address),
     path('vacancies/', vacancy_list),
     path('companies/', company_list),
-    path('workers/', worker_list)
+    path('workers/', worker_list),
+    path('worker/<int:id>/', worker_info)
 ]

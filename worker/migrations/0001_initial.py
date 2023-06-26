@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=255)),
                 ('specialization', models.TextField()),
                 ('expected_salary', models.IntegerField(blank=True, null=True)),
-                ('is_searing', models.BooleanField(default=True)),
+                ('is_searching', models.BooleanField(default=True)),
             ],
         ),
     ]
